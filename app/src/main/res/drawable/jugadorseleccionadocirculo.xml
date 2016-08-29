@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="@color/Dorado1"
+                android:centerColor="@color/Dorado2"
+                android:endColor="@color/Dorado3"
+                android:angle="90"/>
+        </shape>
+    </item>
+    <item android:gravity="center"
+        android:height="@dimen/BordesJugadorCirculo"
+        android:width="@dimen/BordesJugadorCirculo">
+        <shape android:shape="oval"
+            >
+            <solid android:color="#000" />
+        </shape>
+    </item>
+</layer-list>

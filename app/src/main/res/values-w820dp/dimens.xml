@@ -1,0 +1,39 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+
+    <dimen name="tamano_texto_jugadores">50sp</dimen>
+    <dimen name="tamano_texto_progresivo">70sp</dimen>
+
+    <dimen name="Tamano_jugadores_w">99dp</dimen>
+    <dimen name="Tamano_jugadores_h">135dp</dimen>
+
+    <dimen name="Distancia_jugadores_1">268dp</dimen>
+    <dimen name="Distancia_jugadores_2">194dp</dimen>
+    <dimen name="Distancia_jugadores_3">151dp</dimen>
+    <dimen name="Distancia_jugadores_4">112dp</dimen>
+
+    <dimen name="TamañoApuesta">43dp</dimen>
+    <dimen name="TamañoControles">56dp</dimen>
+
+    <dimen name="Bordes">9dp</dimen>
+
+    <dimen name="Distancia_ApuPre1">151dp</dimen>
+    <dimen name="Distancia_ApuPre2">99dp</dimen>
+    <dimen name="Distancia_ApuPre3">65dp</dimen>
+    <dimen name="Distancia_ApuPre4">39dp</dimen>
+    <dimen name="Distancia_ApuPre5">17dp</dimen>
+    <dimen name="Distancia_ApuPre6">10dp</dimen>
+
+    <dimen name="Distancia_Controles1">0dp</dimen>
+    <dimen name="Distancia_Controles2">22dp</dimen>
+    <dimen name="Distancia_Controles3">60dp</dimen>
+    <dimen name="Distancia_Controles4">117dp</dimen>
+
+    <dimen name="Tamaño_progresivo_w">324dp</dimen>
+    <dimen name="Tamaño_progresivo_h">60dp</dimen>
+
+    <dimen name="Tamaño_aviso_w">160dp</dimen>
+    <dimen name="Tamaño_aviso_h">43dp</dimen>
+</resources>

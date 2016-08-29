@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="@dimen/BordesJugadoresDownH"
+
+        >
+        <shape>
+            <gradient
+                android:startColor="@color/Azul3"
+                android:centerColor="@color/Azul2"
+                android:endColor="@color/Azul3"
+                android:angle="0"/>
+        </shape>
+    </item>
+    <item android:top="@dimen/BordesJugadoresDownH"
+        >
+        <shape>
+            <gradient
+                android:startColor="@color/Azul1"
+                android:centerColor="@color/Azul2"
+                android:endColor="@color/Azul1"
+                android:angle="0"/>
+
+        </shape>
+    </item>
+    <item android:left="@dimen/BordesJugadorestopW">
+        <shape>
+            <gradient
+                android:startColor="@color/Azul3"
+                android:centerColor="@color/Azul2"
+                android:endColor="@color/Azul1"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item android:right="@dimen/BordesJugadorestopW">
+        <shape>
+            <gradient
+                android:startColor="@color/Azul3"
+                android:centerColor="@color/Azul2"
+                android:endColor="@color/Azul1"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+</layer-list>

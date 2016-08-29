@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="@dimen/BordesJugadoresDownH"
+        >
+        <shape>
+            <gradient
+                android:startColor="@color/Dorado1"
+                android:centerColor="@color/Dorado1"
+                android:endColor="@color/Dorado1"
+                android:angle="0"/>
+        </shape>
+    </item>
+    <item android:top="@dimen/BordesJugadoresDownH"
+        >
+        <shape>
+            <gradient
+                android:startColor="@color/Dorado3"
+                android:centerColor="@color/Dorado2"
+                android:endColor="@color/Dorado3"
+                android:angle="0"/>
+
+        </shape>
+    </item>
+    <item android:left="@dimen/BordesJugadorestopW">
+        <shape>
+            <gradient
+                android:startColor="@color/Dorado1"
+                android:centerColor="@color/Dorado2"
+                android:endColor="@color/Dorado3"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item android:right="@dimen/BordesJugadorestopW">
+        <shape>
+            <gradient
+                android:startColor="@color/Dorado1"
+                android:centerColor="@color/Dorado2"
+                android:endColor="@color/Dorado3"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item android:gravity="center"
+        android:height="@dimen/BordesJugadoresDownHNEG"
+        android:width="@dimen/BordesJugadorestopWNEG">
+        <shape android:shape="rectangle"
+            >
+            <gradient
+                android:startColor="@color/gris1"
+                android:centerColor="@color/gris2"
+                android:endColor="@color/gris3"
+                android:angle="0"/>
+        </shape>
+    </item>
+
+</layer-list>

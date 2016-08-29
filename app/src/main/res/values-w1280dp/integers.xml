@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="ApuPreDist1">140</integer>
+    <integer name="ApuPreDist2">98</integer>
+    <integer name="ApuPreDist3">70</integer>
+    <integer name="ApuPreDist4">40</integer>
+    <integer name="ApuPreDist5">18</integer>
+    <integer name="ApuPreDist6">0</integer>
+
+    <integer name="Dis_separaApuPre_1">430</integer>
+    <integer name="Dis_separaApuPre_2">348</integer>
+    <integer name="Dis_separaApuPre_3">268</integer>
+    <integer name="Dis_separaApuPre_4">185</integer>
+    <integer name="Dis_separaApuPre_5">100</integer>
+    <integer name="Dis_separaApuPre_6">10</integer>
+
+    <!--  <dimen name="Distancia_ApuPre1">233dp</dimen>
+  <dimen name="Distancia_ApuPre2">153dp</dimen>
+  <dimen name="Distancia_ApuPre3">100dp</dimen>
+  <dimen name="Distancia_ApuPre4">60dp</dimen>
+  <dimen name="Distancia_ApuPre5">27dp</dimen>
+  <dimen name="Distancia_ApuPre6">0dp</dimen>-->
+</resources>

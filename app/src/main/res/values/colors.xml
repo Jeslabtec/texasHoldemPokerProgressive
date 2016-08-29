@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+
+
+    <color name="azul1">#0dfada</color>
+    <color name="azul2">#4fcdf0</color>
+    <color name="azul3">#46636b</color>
+
+    <color name="Dorado1">#e0b300</color>
+    <color name="Dorado2">#dbd76d</color>
+    <color name="Dorado3">#b39b22</color>
+
+    <color name="gris1">#e2e2e2</color>
+    <color name="gris2">#d1d1d1</color>
+    <color name="gris3">#fefefe</color>
+
+    <color name="gris4">#6e686e</color>
+    <color name="gris5">#b0a4b0</color>
+    <color name="gris6">#ababab</color>
+
+    <color name="Negro1">#131313</color>
+    <color name="Negro2">#666666</color>
+
+
+    <color name="Rojo1">#a60303</color>
+    <color name="Rojo2">#fa4153</color>
+    <color name="Rojo3">#6b0004</color>
+
+    <color name="Azul1">#9ac1e6</color>
+    <color name="Azul2">#e09298</color>
+    <color name="Azul3">#0555ab</color>
+
+    <color name="FichaAcreditar">#3e4095</color>
+    <color name="Fichajugar">#FF2121</color>
+    <color name="FichaPagar">#0D902A</color>
+    <color name="FichaRetirar">#D7BB07</color>
+
+
+    <color name="FichaPremio1">#5A4514</color>
+    <color name="FichaPremio2">#666666</color>
+
+
+
+    <color name="common_action_bar_splitter">#ffffff</color>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:gravity="center"
+    android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EncargadoTV"
+            android:textSize="60dp"
+            android:textIsSelectable="false"
+            android:textColor="@color/FichaPremio2"
+            android:clickable="false"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/coding"
+            android:textSize="60dp"
+            android:background="@color/FichaPremio2"
+            android:textAlignment="center"
+            android:textColor="#171616" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:useDefaultMargins="false"
+        android:rowOrderPreserved="false"
+        android:longClickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="1"
+            android:id="@+id/num1"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="2"
+            android:textSize="50dp"
+            android:id="@+id/num2"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="3"
+            android:id="@+id/num3"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="4"
+            android:id="@+id/num4"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+
+    <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="5"
+            android:id="@+id/num5"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="6"
+            android:id="@+id/num6"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="7"
+            android:id="@+id/num7"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="8"
+            android:id="@+id/num8"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="9"
+            android:id="@+id/num9"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="BORRAR"
+            android:id="@+id/BorrarTV"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#d9221f"
+            android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="0"
+            android:id="@+id/num0"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:background="#f4fbf8"
+            android:textColor="#726d6d" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="CONFIRMAR"
+            android:id="@+id/okTV"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:layout_alignTop="@+id/num0"
+            android:layout_alignLeft="@+id/num9"
+            android:layout_alignStart="@+id/num9"
+            android:background="#07f18d"
+            android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
+
+    </GridLayout>
+
+
+</LinearLayout>
