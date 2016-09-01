@@ -9,9 +9,12 @@
                 android:angle="45"/>
         </shape>
     </item>
-    <item android:gravity="center"
-        android:height="@dimen/BordesJugadorCirculo"
-        android:width="@dimen/BordesJugadorCirculo">
+    <item android:top="@dimen/PaddingJugadorCirculo"
+        android:left="@dimen/PaddingJugadorCirculo"
+        android:start="@dimen/PaddingJugadorCirculo"
+        android:bottom="@dimen/PaddingJugadorCirculo"
+        android:end="@dimen/PaddingJugadorCirculo"
+        android:right="@dimen/PaddingJugadorCirculo">
         <shape android:shape="oval"
             >
             <gradient

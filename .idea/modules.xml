@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpclient-4.5.2/httpclient-4.5.2.iml" filepath="$PROJECT_DIR$/httpclient-4.5.2/httpclient-4.5.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpcore-4.4.5/httpcore-4.4.5.iml" filepath="$PROJECT_DIR$/httpcore-4.4.5/httpcore-4.4.5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/texasHoldemPokerProgressive2.iml" filepath="$PROJECT_DIR$/texasHoldemPokerProgressive2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/texasHoldemPokerProgressive.iml" filepath="$PROJECT_DIR$/texasHoldemPokerProgressive.iml" />
     </modules>
   </component>
 </project>

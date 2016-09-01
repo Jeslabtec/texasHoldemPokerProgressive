@@ -10,9 +10,13 @@
 
     </shape>
 </item>
-<item android:gravity="center"
-    android:height="@dimen/Tamaño_progresivo_hInt"
-    android:width="@dimen/Tamaño_progresivo_wInt">
+<item
+    android:top="@dimen/Tamaño_progresivo_PaddingH"
+    android:left="@dimen/Tamaño_progresivo_PaddingW"
+    android:start="@dimen/Tamaño_progresivo_PaddingW"
+    android:bottom="@dimen/Tamaño_progresivo_PaddingH"
+    android:end="@dimen/Tamaño_progresivo_PaddingW"
+    android:right="@dimen/Tamaño_progresivo_PaddingW">
     <shape android:shape="rectangle"
         >
         <corners android:radius="30dp"/>

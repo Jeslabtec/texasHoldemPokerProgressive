@@ -9,13 +9,12 @@
             android:angle="45"/>
     </shape>
     </item>
-    <item android:top="@dimen/PaddingJugadorCirculo"
-        android:left="@dimen/PaddingJugadorCirculo"
-        android:start="@dimen/PaddingJugadorCirculo"
-        android:bottom="@dimen/PaddingJugadorCirculo"
-        android:end="@dimen/PaddingJugadorCirculo"
-        android:right="@dimen/PaddingJugadorCirculo"
->
+    <item android:top="@dimen/TamanoPremiosCodigoautBordes"
+        android:left="@dimen/TamanoPremiosCodigoautBordes"
+        android:start="@dimen/TamanoPremiosCodigoautBordes"
+        android:bottom="@dimen/TamanoPremiosCodigoautBordes"
+        android:end="@dimen/TamanoPremiosCodigoautBordes"
+        android:right="@dimen/TamanoPremiosCodigoautBordes">
         <shape android:shape="oval"
             >
             <solid android:color="#000" />

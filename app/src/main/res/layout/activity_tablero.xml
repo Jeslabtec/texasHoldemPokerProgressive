@@ -2,13 +2,13 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
 
-        tools:context="com.progresive.user.cashpokerprogresive.tablero"
+        tools:context="com.progresivocashpoker.www.texasholdempokerprogressive.tablero"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/tablero"
         android:layout_gravity="center"
         >
-        <!--Jugador4-->
+                      <!--Jugador4-->
 
         <TextView
             android:layout_width="@dimen/Tamano_jugadores_topW"
@@ -139,13 +139,9 @@
             android:fontFamily="sans-serif-condensed"
             android:textSize="@dimen/tamano_texto_jugadoresDown"
 
-            android:layout_marginBottom="@dimen/Distancia_jugadores_2"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="@dimen/Distancia_entre_jugadores"
-            android:layout_marginEnd="@dimen/Distancia_entre_jugadores"
-            android:layout_toLeftOf="@id/tvJugador5Down"
-            android:layout_toStartOf="@id/tvJugador5Down"
-            />
+            android:layout_alignBottom="@+id/tvJugador4Circulo"
+            android:layout_alignRight="@+id/tvJugador7Circulo"
+            android:layout_alignEnd="@+id/tvJugador7Circulo" />
         <TextView
             android:layout_width="@dimen/Tamano_jugadores_topW"
             android:layout_height="@dimen/Tamano_jugadores_toph"
@@ -198,13 +194,9 @@
             android:fontFamily="sans-serif-condensed"
             android:textSize="@dimen/tamano_texto_jugadoresDown"
 
-            android:layout_marginBottom="@dimen/Distancia_jugadores_1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="@dimen/Distancia_entre_jugadores"
-            android:layout_marginEnd="@dimen/Distancia_entre_jugadores"
-            android:layout_toLeftOf="@id/tvJugador6Down"
-            android:layout_toStartOf="@id/tvJugador6Down"
-            />
+            android:layout_above="@+id/tvJugador6Circulo"
+            android:layout_toLeftOf="@+id/TVprogresivo"
+            android:layout_toStartOf="@+id/TVprogresivo" />
         <TextView
             android:layout_width="@dimen/Tamano_jugadores_topW"
             android:layout_height="@dimen/Tamano_jugadores_toph"

@@ -9,9 +9,13 @@
         <corners android:radius="30dp"/>
     </shape>
 </item>
-<item android:gravity="center"
-    android:height="@dimen/Tamaño_aviso_hInt"
-    android:width="@dimen/Tamaño_aviso_wInt">
+<item
+    android:top="@dimen/Tamaño_aviso_PaddingH"
+    android:left="@dimen/Tamaño_aviso_PaddingW"
+    android:start="@dimen/Tamaño_aviso_PaddingW"
+    android:bottom="@dimen/Tamaño_aviso_PaddingH"
+    android:end="@dimen/Tamaño_aviso_PaddingW"
+    android:right="@dimen/Tamaño_aviso_PaddingW">
     <shape android:shape="rectangle"
         >
         <corners android:radius="30dp"/>
