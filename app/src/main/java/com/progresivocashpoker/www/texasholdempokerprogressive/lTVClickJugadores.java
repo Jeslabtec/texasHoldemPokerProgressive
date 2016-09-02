@@ -22,6 +22,12 @@ public class lTVClickJugadores implements View.OnClickListener {
                 return (5);
             case R.id.tvJugador7:
                 return (6);
+            case R.id.tvJugador8:
+                return (7);
+            case R.id.tvJugador9:
+                return (8);
+            case R.id.tvJugador10:
+                return (9);
             default:
                 return(-1);
         }

@@ -69,11 +69,11 @@ public class lTVClickBtnApeustasPremios implements View.OnClickListener   {
                    int jug=tablero.mesaJuego.JugadorSeleccionado();
                    int Apu=0;
 
-                   if(i!=5) {
+                   if(i!=2) {
                        Apu = tablero.mesaJuego.ApuestaPremio[i].ValorNumerico();
                    }
                    if (jug>=0) {
-                       if (tablero.mesaJuego.ApuestaPremio[5].verSiRestando()) {
+                       if (tablero.mesaJuego.ApuestaPremio[2].verSiRestando()) {
                            tablero.mesaJuego.jugador[jug].cargarapuesta(-Apu);
                        }else{
                            tablero.mesaJuego.jugador[jug].cargarapuesta(Apu);
