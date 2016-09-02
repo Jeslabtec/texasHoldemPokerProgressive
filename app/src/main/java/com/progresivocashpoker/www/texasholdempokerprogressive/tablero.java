@@ -36,12 +36,12 @@ public class tablero extends AppCompatActivity {
                 (TextView) findViewById(R.id.tvJugador5),
                 (TextView) findViewById(R.id.tvJugador6),
                 (TextView) findViewById(R.id.tvJugador7),
+                (TextView) findViewById(R.id.tvJugador8),
+                (TextView) findViewById(R.id.tvJugador9),
+                (TextView) findViewById(R.id.tvJugador10),
                 (TextView) findViewById(R.id.tvPremioApuesta1),
                 (TextView) findViewById(R.id.tvPremioApuesta2),
                 (TextView) findViewById(R.id.tvPremioApuesta3),
-                (TextView) findViewById(R.id.tvPremioApuesta4),
-                (TextView) findViewById(R.id.tvPremioApuesta5),
-                (TextView) findViewById(R.id.tvPremioApuesta6),
                 (TextView) findViewById(R.id.tvPagar),
                 (TextView) findViewById(R.id.tvJugar),
                 (TextView) findViewById(R.id.tvApostar),
@@ -55,13 +55,19 @@ public class tablero extends AppCompatActivity {
                 (TextView) findViewById(R.id.tvJugador5Down),
                 (TextView) findViewById(R.id.tvJugador6Down),
                 (TextView) findViewById(R.id.tvJugador7Down),
+                (TextView) findViewById(R.id.tvJugador8Down),
+                (TextView) findViewById(R.id.tvJugador9Down),
+                (TextView) findViewById(R.id.tvJugador10Down),
                 (TextView) findViewById(R.id.tvJugador1Circulo),
                 (TextView) findViewById(R.id.tvJugador2Circulo),
                 (TextView) findViewById(R.id.tvJugador3Circulo),
                 (TextView) findViewById(R.id.tvJugador4Circulo),
                 (TextView) findViewById(R.id.tvJugador5Circulo),
                 (TextView) findViewById(R.id.tvJugador6Circulo),
-                (TextView) findViewById(R.id.tvJugador7Circulo)};
+                (TextView) findViewById(R.id.tvJugador7Circulo),
+                (TextView) findViewById(R.id.tvJugador8Circulo),
+                (TextView) findViewById(R.id.tvJugador9Circulo),
+                (TextView) findViewById(R.id.tvJugador10Circulo)};
 
         mesaJuego = new Mesa(datos);
         // sección de Alert Dialgos, en esta sección se colocará el valor de cada Alert dialog para la confirmacion de  el pago de premios

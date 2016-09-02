@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class ClaseApuestaPremio {
     //Cada uno de los posibles valres que pueden tener las monedas (preguntar a lopez porque esta el valor 0.0
 
-    private final int[] VectorValSuma = {1,2,5,10,20,0} ;
+    private final int[] VectorValSuma = {1,2,0} ;
     // Objeto de la UI, en este caso un textview, ver como lo puedo retirar
     private TextView ApuestaPremioTV;
     //String que guarda el porcentaje para mostrarlo en el textview
@@ -74,7 +74,7 @@ public class ClaseApuestaPremio {
     //pone a los botones en forma de apuesta
     public void BotonesApuesta(){
         ApuestaPremioTV.setVisibility(View.VISIBLE);
-        if(QuienSoy==5){
+        if(QuienSoy==2){
             ApuestaPremioTV.setText("+");
         }else{
 
