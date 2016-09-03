@@ -12,9 +12,9 @@ import java.util.TimerTask;
  */
 public class Mesa {
     //Objetos que representa c/u de los jugadores
-    Jugador[] jugador = new Jugador[7];
+    Jugador[] jugador = new Jugador[10];
     //Objetos de Los botones de apuestas premios
-    ClaseApuestaPremio[] ApuestaPremio = new ClaseApuestaPremio[6];
+    ClaseApuestaPremio[] ApuestaPremio = new ClaseApuestaPremio[5];
     //Textview que me dice en que fase esta el juego
     TextView AvisoTV;
     ControlesJuego pagarTV;
@@ -35,23 +35,23 @@ public class Mesa {
     public Mesa(TextView[] v) {
 //Creacion de los objetos jugadores que son 7
         for (int i = 0; i < jugador.length; i++) {
-            jugador[i] = new Jugador(v[i], v[i + 19], v[i + 26]);
+            jugador[i] = new Jugador(v[i], v[i + 22], v[i + 32]);
         }
         //Creacion de los objetos ApuestaPremio que son 6
         for (int i = 0; i < ApuestaPremio.length; i++) {
-            ApuestaPremio[i] = new ClaseApuestaPremio(v[i + 7], i);
+            ApuestaPremio[i] = new ClaseApuestaPremio(v[i + 10], i);
         }
         //Creacion de los 4 objetos de control
-        pagarTV = new ControlesJuego(v[13], 1);
-        jugarTV = new ControlesJuego(v[14], 2);
-        apostarTV = new ControlesJuego(v[15], 3);
-        retirarseTV = new ControlesJuego(v[16], 4);
+        pagarTV = new ControlesJuego(v[16], 1);
+        jugarTV = new ControlesJuego(v[17], 2);
+        apostarTV = new ControlesJuego(v[18], 3);
+        retirarseTV = new ControlesJuego(v[19], 4);
 
         //Seteo del long click listener de la configuracion
-        AvisoTV = v[17];
+        AvisoTV = v[20];
 
         //Creacion del objeto progresivo
-        ProgresivoTV = new ClaseDelProgresivo(v[18]);
+        ProgresivoTV = new ClaseDelProgresivo(v[21]);
         cambiarBotones();
         //Objeto que contiene los mensajes de alerta
         mensaje = new MensajesAlerta();
@@ -63,46 +63,32 @@ public class Mesa {
         int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
         int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
         int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
-        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
-        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
+
 
         int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
         int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
         int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
-        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
-        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
-        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
 
         ApuestaPremio[0].Movimientopremio(-X1, -Y1);
         ApuestaPremio[1].Movimientopremio(-X2, -Y2);
         ApuestaPremio[2].Movimientopremio(-X3, -Y3);
-        ApuestaPremio[3].Movimientopremio(-X4, -Y4);
-        ApuestaPremio[4].Movimientopremio(-X5, -Y5);
-        ApuestaPremio[5].Movimientopremio(-X6, -Y6);
     }
 
     private void animaciondesplazamientoApuesta() {
         int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
         int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
         int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
-        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
-        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
+
 
         int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
         int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
         int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
-        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
-        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
-        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
+
 
         ApuestaPremio[0].Movimientoapuesta(-X1, -Y1);
         ApuestaPremio[1].Movimientoapuesta(-X2, -Y2);
         ApuestaPremio[2].Movimientoapuesta(-X3, -Y3);
-        ApuestaPremio[3].Movimientoapuesta(-X4, -Y4);
-        ApuestaPremio[4].Movimientoapuesta(-X5, -Y5);
-        ApuestaPremio[5].Movimientoapuesta(-X6, -Y6);
+
     }
 
     //funcion que cambia el textview mientras es undido
@@ -330,7 +316,7 @@ public class Mesa {
     //*********************************************************************************************************************
     //Que pasa con los textview cuando se une cualquiera de los controles//
     private void BotonesdeApuesta() {
-        ApuestaPremio[5].ponerSumando();
+        ApuestaPremio[2].ponerSumando();
         retirarseTV.Habilitar();
         pagarTV.Bloquear();
         jugarTV.Habilitar();
@@ -419,7 +405,6 @@ public class Mesa {
 
     //Acciones que permiten confirmar el pago, es valida cuando el codigo ingresado en codigoaut pertenece a un dealer o supervisor
     public int AccionesConfirmarPago() {
-
         double Progresivo = (int) ProgresivoTV.ValorDelProgresivo();
         double Premio = ApuestaPremio[ApuPreSeleccionado()].ValorNumerico();
         double pago;
