@@ -3,7 +3,7 @@
     <dimen name="tamano_texto_jugadoresTop">70sp</dimen>
     <dimen name="tamano_texto_jugadoresDown">25sp</dimen>
     <dimen name="tamano_texto_jugadoresCirculo">50sp</dimen>
-    <dimen name="tamano_texto_progresivo">90sp</dimen>
+    <dimen name="tamano_texto_progresivo">70sp</dimen>
     <dimen name="tamano_texto_Apuesta">30sp</dimen>
     <dimen name="tamano_texto_Premio">30sp</dimen>
     <dimen name="tamano_texto_fichasFase">28sp</dimen>
@@ -30,39 +30,48 @@
     <dimen name="BordesJugadorestopH">116dp</dimen>
     <dimen name="BordesJugadoresDownH">31dp</dimen>
 
-    <dimen name="Distancia_jugadores_1">413dp</dimen>
-    <dimen name="Distancia_jugadores_2">290dp</dimen>
-    <dimen name="Distancia_jugadores_3">235dp</dimen>
-    <dimen name="Distancia_jugadores_4">200dp</dimen>
+    <dimen name="Distancia_jugadores_abajo1">170dp</dimen>
+    <dimen name="Distancia_jugadores_abajo2">190dp</dimen>
+    <dimen name="Distancia_jugadores_abajo3">230dp</dimen>
+    <dimen name="Distancia_jugadores_abajo4">400dp</dimen>
+    <dimen name="Distancia_jugadores_abajo5">510dp</dimen>
+
+    <dimen name="Distancia_jugadores_lateral1">500dp</dimen>
+    <dimen name="Distancia_jugadores_lateral2">360dp</dimen>
+    <dimen name="Distancia_jugadores_lateral3">220dp</dimen>
+    <dimen name="Distancia_jugadores_lateral4">120dp</dimen>
+    <dimen name="Distancia_jugadores_lateral5">260dp</dimen>
 
     <dimen name="Distancia_entre_jugadores">13dp</dimen>
 
-    <dimen name="TamañoControles">110dp</dimen>
+    <dimen name="TamañoControles">100dp</dimen>
 
-    <dimen name="Distancia_Controles1">20dp</dimen>
-    <dimen name="Distancia_Controles2">60dp</dimen>
-    <dimen name="Distancia_Controles3">110dp</dimen>
-    <dimen name="Distancia_Controles4">160dp</dimen>
+    <dimen name="Distancia_Controles1">0dp</dimen>
+    <dimen name="Distancia_Controles2">0dp</dimen>
+    <dimen name="Distancia_Controles3">20dp</dimen>
+    <dimen name="Distancia_Controles4">60dp</dimen>
 
-    <dimen name="Separacion_jugadores_1">17dp</dimen>
-    <dimen name="Separacion_jugadores_2">10dp</dimen>
-    <dimen name="Separacion_jugadores_3">8dp</dimen>
-    <dimen name="Separacion_jugadores_4">8dp</dimen>
+    <dimen name="Separacion_controles_1">20dp</dimen>
+    <dimen name="Separacion_controles_2">20dp</dimen>
+    <dimen name="Separacion_controles_3">20dp</dimen>
+    <dimen name="Separacion_controles_4">20dp</dimen>
 
     <dimen name="Bordes">13dp</dimen>
     <dimen name="Distancia_ApuPre">32dp</dimen>
 
-    <dimen name="Tamaño_progresivo_w">700dp</dimen>
+    <dimen name="Tamaño_progresivo_w">500dp</dimen>
     <dimen name="Tamaño_progresivo_h">110dp</dimen>
     <dimen name="Tamaño_progresivo_PaddingW">25dp</dimen>
     <dimen name="Tamaño_progresivo_PaddingH">10dp</dimen>
     <dimen name="Borde_progresivo">3dp</dimen>
+
 
     <dimen name="Tamaño_aviso_w">247dp</dimen>
     <dimen name="Tamaño_aviso_h">67dp</dimen>
     <dimen name="Tamaño_aviso_PaddingW">10dp</dimen>
     <dimen name="Tamaño_aviso_PaddingH">5dp</dimen>
     <dimen name="Borde_aviso">3dp</dimen>
+    <dimen name="DistanciaAvisoAbajo">20dp</dimen>
 
     <dimen name="TamanoPremiosCodigoaut">550dp</dimen>
     <dimen name="TamanoPremiosCodigoautBordes">50dp</dimen>
