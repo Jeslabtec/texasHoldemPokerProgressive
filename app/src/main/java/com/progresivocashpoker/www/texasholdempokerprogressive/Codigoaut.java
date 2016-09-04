@@ -45,19 +45,11 @@ public class Codigoaut extends AppCompatActivity {
                 CodeTV[3].setText(String.valueOf(CPPLogin.manip.verPorcentajePremio(2)));
                 break;
             case 3:
-                CodeTV[3].setBackgroundResource(R.drawable.premiofull);
+                CodeTV[3].setBackgroundResource(R.drawable.premioparperfecto);
                 CodeTV[3].setText(String.valueOf(CPPLogin.manip.verPorcentajePremio(3)));
                 break;
-            case 4:
-                CodeTV[3].setBackgroundResource(R.drawable.premiocolor);
-                CodeTV[3].setText(String.valueOf(CPPLogin.manip.verPorcentajePremio(4)));
-                break;
-            case 5:
-                CodeTV[3].setBackgroundResource(R.drawable.premioescalerasucia);
-                CodeTV[3].setText(String.valueOf(CPPLogin.manip.verPorcentajePremio(5)));
-                break;
         }
-                CodeTV[4].setText(String.valueOf(tablero.mesaJuego.JugadorSeleccionado()+1));
+                CodeTV[4].setText(String.valueOf(tablero.mesaJuego.JugadorSeleccionado()));
         if(tablero.mesaJuego.necesariosupervisor) {
             CodeTV[2].setText(R.string.Supervisor);
         }else{

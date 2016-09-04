@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class ClaseApuestaPremio {
     //Cada uno de los posibles valres que pueden tener las monedas (preguntar a lopez porque esta el valor 0.0
 
-    private final int[] VectorValSuma = {1,2,0} ;
+    private final int[] VectorValSuma = {1,2,5,10,20,0} ;
     // Objeto de la UI, en este caso un textview, ver como lo puedo retirar
     private TextView ApuestaPremioTV;
     //String que guarda el porcentaje para mostrarlo en el textview
@@ -41,32 +41,33 @@ public class ClaseApuestaPremio {
         QuienSoy=i;
         Premio=CPPLogin.manip.verPorcentajePremio(i);
         valorSuma=VectorValSuma[i];
-
-
     }
     //Pone los botones en forma de premio
     public void BotonesPremio(){
-
         ApuestaPremioTV.setText(String.valueOf(Premio));
-        ApuestaPremioTV.setVisibility(View.VISIBLE);
+
         switch (QuienSoy)
         {case 0:
             ApuestaPremioTV.setBackgroundResource(R.drawable.premioescalerareal);
+            ApuestaPremioTV.setVisibility(View.VISIBLE);
             break;
             case 1:
                 ApuestaPremioTV.setBackgroundResource(R.drawable.premioescaleracolor);
+                ApuestaPremioTV.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 ApuestaPremioTV.setBackgroundResource(R.drawable.premiopoker);
+                ApuestaPremioTV.setVisibility(View.VISIBLE);
                 break;
             case 3:
-                ApuestaPremioTV.setBackgroundResource(R.drawable.premiofull);
+                ApuestaPremioTV.setBackgroundResource(R.drawable.premioparperfecto);
+                ApuestaPremioTV.setVisibility(View.VISIBLE);
                 break;
             case 4:
-                ApuestaPremioTV.setBackgroundResource(R.drawable.premiocolor);
+                ApuestaPremioTV.setVisibility(View.INVISIBLE);
                 break;
             case 5:
-                ApuestaPremioTV.setBackgroundResource(R.drawable.premioescalerasucia);
+                ApuestaPremioTV.setVisibility(View.INVISIBLE);
                 break;
         }
 
@@ -74,10 +75,9 @@ public class ClaseApuestaPremio {
     //pone a los botones en forma de apuesta
     public void BotonesApuesta(){
         ApuestaPremioTV.setVisibility(View.VISIBLE);
-        if(QuienSoy==2){
+        if(QuienSoy==5){
             ApuestaPremioTV.setText("+");
         }else{
-
             ApuestaPremioTV.setText(String.valueOf(valorSuma));
         }
         ApuestaPremioTV.setBackgroundResource(R.drawable.botonapuesta);

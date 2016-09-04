@@ -96,16 +96,18 @@ public class Jugador {
             public void run() {
                 handler.post(new Runnable() {
                     public void run() {
-                        if (ConteoAlerta<6) {
+                        if (ConteoAlerta<8) {
                             ConteoAlerta++;
-                            avisoApuestaAcabada();
+
                             if(Aviso){
-                              Habilitar();
+                                Habilitar();
                                 Aviso=false;
                             }else{
                                 Seleccionar();
+                                tablero.mesaJuego.reproducirSonido(2);
                                 Aviso=true;
                             }
+                            avisoApuestaAcabada();
                         }else{
                             Habilitar();
                             ConteoAlerta=0;

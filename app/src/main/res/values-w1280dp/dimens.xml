@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tamano_texto_jugadoresTop">70sp</dimen>
+    <dimen name="tamano_texto_jugadoresTop">50sp</dimen>
     <dimen name="tamano_texto_jugadoresDown">25sp</dimen>
-    <dimen name="tamano_texto_jugadoresCirculo">50sp</dimen>
+    <dimen name="tamano_texto_jugadoresCirculo">40sp</dimen>
     <dimen name="tamano_texto_progresivo">70sp</dimen>
     <dimen name="tamano_texto_Apuesta">30sp</dimen>
     <dimen name="tamano_texto_Premio">30sp</dimen>
@@ -30,7 +30,7 @@
     <dimen name="BordesJugadorestopH">116dp</dimen>
     <dimen name="BordesJugadoresDownH">31dp</dimen>
 
-    <dimen name="Distancia_jugadores_abajo1">170dp</dimen>
+    <dimen name="Distancia_jugadores_abajo1">205dp</dimen>
     <dimen name="Distancia_jugadores_abajo2">190dp</dimen>
     <dimen name="Distancia_jugadores_abajo3">230dp</dimen>
     <dimen name="Distancia_jugadores_abajo4">400dp</dimen>
@@ -73,6 +73,24 @@
     <dimen name="Borde_aviso">3dp</dimen>
     <dimen name="DistanciaAvisoAbajo">20dp</dimen>
 
+    <dimen name="AlturaBono">195dp</dimen>
+    <dimen name="AnchuraBono">120dp</dimen>
+
     <dimen name="TamanoPremiosCodigoaut">550dp</dimen>
     <dimen name="TamanoPremiosCodigoautBordes">50dp</dimen>
+
+
+    <dimen name="ApuPreAltura1">0dp</dimen>
+    <dimen name="ApuPreAltura2">0dp</dimen>
+    <dimen name="ApuPreAltura3">0dp</dimen>
+    <dimen name="ApuPreAltura4">0dp</dimen>
+    <dimen name="ApuPreAltura5">0dp</dimen>
+    <dimen name="ApuPreAltura6">0dp</dimen>
+
+    <dimen name="ApuPreLateral1">0dp</dimen>
+    <dimen name="ApuPreLateral2">0dp</dimen>
+    <dimen name="ApuPreLateral3">0dp</dimen>
+    <dimen name="ApuPreLateral4">0dp</dimen>
+    <dimen name="ApuPreLateral5">0dp</dimen>
+    <dimen name="ApuPreLateral6">0dp</dimen>
 </resources>

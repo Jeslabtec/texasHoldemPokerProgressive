@@ -53,7 +53,7 @@ public class ClaseDelProgresivo {
 
 
     public void aumentoAleatorio(){
-        Dinero=(1-0.86071) *  (AumentoPremio) + (0.86071) * (Dinero);
+        Dinero=(1-0.7788) *  (AumentoPremio) + (0.7788) * (Dinero);
         ProgresivoTV.setText(format.format(Math.round(Dinero)));
     }
 

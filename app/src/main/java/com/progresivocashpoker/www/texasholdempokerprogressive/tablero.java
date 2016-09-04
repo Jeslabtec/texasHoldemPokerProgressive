@@ -70,9 +70,12 @@ public class tablero extends AppCompatActivity {
                 (TextView) findViewById(R.id.tvJugador7Circulo),
                 (TextView) findViewById(R.id.tvJugador8Circulo),
                 (TextView) findViewById(R.id.tvJugador9Circulo),
-                (TextView) findViewById(R.id.tvJugador10Circulo)};
+                (TextView) findViewById(R.id.tvJugador10Circulo),
+                (TextView) findViewById(R.id.TVBono1),
+                (TextView) findViewById(R.id.TVBono2)
+        };
 
-        mesaJuego = new Mesa(datos);
+
         // sección de Alert Dialgos, en esta sección se colocará el valor de cada Alert dialog para la confirmacion de  el pago de premios
        //-----------------------------------------------------------------------------------------------------//
         //Mensaje de confirmacion de retiro//
@@ -82,13 +85,12 @@ public class tablero extends AppCompatActivity {
         // Set volume rocker mode to media volume
         this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
         // Lee los sonidos que figuran en res/raw
-       clic = sound.load(R.raw.clic);
-        // https://www.iconfinder.com/        Descargar los iconos
-    }
-    public void reproducirSonido()
-    {
-        //Obtenemos el id del sonido
-        sound.play(clic);
+
+        mesaJuego = new Mesa(datos,sound);
+        // sección de Alert Dialgos, en esta sección se colocará el valor de cada Alert dialog para la confirmacion de  el pago de premios
+        //-----------------------------------------------------------------------------------------------------//
+        //Mensaje de confirmacion de retiro//
+        //Administrador de sonido---------------------------------------------
     }
 
     @Override

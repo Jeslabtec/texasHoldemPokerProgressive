@@ -14,9 +14,11 @@ public class Mesa {
     //Objetos que representa c/u de los jugadores
     Jugador[] jugador = new Jugador[10];
     //Objetos de Los botones de apuestas premios
-    ClaseApuestaPremio[] ApuestaPremio = new ClaseApuestaPremio[5];
+    ClaseApuestaPremio[] ApuestaPremio = new ClaseApuestaPremio[6];
     //Textview que me dice en que fase esta el juego
     TextView AvisoTV;
+    TextView Bono1TV;
+    TextView Bono2TV;
     ControlesJuego pagarTV;
     ControlesJuego jugarTV;
     ControlesJuego apostarTV;
@@ -24,6 +26,10 @@ public class Mesa {
     ClaseDelProgresivo ProgresivoTV;
     MensajesAlerta mensaje;
 
+    administradorDeSonido sonido;
+    int clic;
+    int aviso;
+    int winner;
 
     //variable que dice si se necesita el supervisor o no
     public boolean necesariosupervisor = false;
@@ -32,7 +38,7 @@ public class Mesa {
     private int EstadoJuego = 3;
 
     // constructor de la clase Mesa:  el programa
-    public Mesa(TextView[] v) {
+    public Mesa(TextView[] v,administradorDeSonido w) {
 //Creacion de los objetos jugadores que son 7
         for (int i = 0; i < jugador.length; i++) {
             jugador[i] = new Jugador(v[i], v[i + 22], v[i + 32]);
@@ -49,6 +55,13 @@ public class Mesa {
 
         //Seteo del long click listener de la configuracion
         AvisoTV = v[20];
+        Bono1TV=v[42];
+        Bono2TV=v[43];
+        //conficguracion del sonido
+        sonido=w;
+        clic = sonido.load(R.raw.clic);
+        aviso=sonido.load(R.raw.aviso);
+        winner=sonido.load(R.raw.winner);
 
         //Creacion del objeto progresivo
         ProgresivoTV = new ClaseDelProgresivo(v[21]);
@@ -63,32 +76,46 @@ public class Mesa {
         int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
         int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
         int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-
+        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
+        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
+        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
 
         int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
         int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
         int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
+        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
+        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
+        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
 
         ApuestaPremio[0].Movimientopremio(-X1, -Y1);
         ApuestaPremio[1].Movimientopremio(-X2, -Y2);
         ApuestaPremio[2].Movimientopremio(-X3, -Y3);
+        ApuestaPremio[3].Movimientopremio(-X4, -Y4);
+        ApuestaPremio[4].Movimientopremio(-X5, -Y5);
+        ApuestaPremio[5].Movimientopremio(-X6, -Y6);
     }
 
     private void animaciondesplazamientoApuesta() {
         int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
         int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
         int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-
+        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
+        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
+        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
 
         int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
         int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
         int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
-
+        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
+        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
+        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
 
         ApuestaPremio[0].Movimientoapuesta(-X1, -Y1);
         ApuestaPremio[1].Movimientoapuesta(-X2, -Y2);
         ApuestaPremio[2].Movimientoapuesta(-X3, -Y3);
-
+        ApuestaPremio[3].Movimientoapuesta(-X4, -Y4);
+        ApuestaPremio[4].Movimientoapuesta(-X5, -Y5);
+        ApuestaPremio[5].Movimientoapuesta(-X6, -Y6);
     }
 
     //funcion que cambia el textview mientras es undido
@@ -131,7 +158,7 @@ public class Mesa {
     public int cuantosJugando() {
         int jugadores = 0;
         for (int i = 0; i < tablero.mesaJuego.jugador.length; i++) {
-            if (tablero.mesaJuego.jugador[i].verapuesta() > 0 && tablero.mesaJuego.jugador[i].verSiPausado()) {
+            if (tablero.mesaJuego.jugador[i].jugadortv.isEnabled() && tablero.mesaJuego.jugador[i].verSiPausado()) {
                 jugadores++;
             }
         }
@@ -182,128 +209,102 @@ public class Mesa {
                 tablero.mesaJuego.jugador[i].apostemos();
             }
         }
-            jugadaActual++;
-            if (jugadaActual == jugadasBonus) {
-                ganadorBonus = (int) Math.floor(Math.random() * 7);
-                jugadaActual = 0;
-                jugadasBonus = getBinomial(16, 0.5);
-                EstadoBonusOn();
-                BonusCambio(ganadorBonus);
-            }
 
         ProgresivoTV.setAumentoPremio();
         progresivoLoco();
 
     }
-
-    //Bonus************************************************************************************************
-    //variable que dice en que jugada va a haber un ganado
-    private int jugadasBonus = getBinomial(16, 0.5);
-    //conteo de las jugadas que se reinicia cuando hay un ganador
-    private int jugadaActual = 0;
-    //
-    private int iteracionesBonus = -1;
-    private int jugadorBonus = -1;
-    private int tiempoBonus = 200;
-    private int ganadorBonus = -1;
-    Timer t1 = new Timer();
-    final Handler handler1 = new Handler();
-
-
-    public int getBinomial(int n, double p) {
-        int x = 0;
-        for (int i = 0; i < n; i++) {
-            if (Math.random() < p)
-                x++;
-        }
-        return x;
-    }
-
-    private void BonusTimer() {
-        t1.schedule(new TimerTask() {
-            public void run() {
-                handler1.post(new Runnable() {
-                    public void run() {
-                        SeleccionarJugadorBonus();
-                    }
-                });
-            }
-        }, tiempoBonus);
-    }
-
-    private void BonusCambio(int jugadorGanador) {
-        jugadorBonus = 11 + jugadorGanador;
-        for (int i = 0; i < jugador.length; i++) {
-            jugador[i].bonusScreen(false);
-        }
-        SeleccionarJugadorBonus();
-    }
-    //Sirve para ir pasando el jugador hasta que llegue al ganador
-
-    public void SeleccionarJugadorBonus() {
-        if (iteracionesBonus == -1) {
-            jugador[iteracionesBonus + 1].bonusScreen(true);
-        } else if (iteracionesBonus >= 0 && iteracionesBonus < 6) {
-            jugador[iteracionesBonus].bonusScreen(false);
-            jugador[iteracionesBonus + 1].bonusScreen(true);
-        } else if (iteracionesBonus >= 6 && iteracionesBonus < 12) {
-            jugador[12 - iteracionesBonus].bonusScreen(false);
-            jugador[11 - iteracionesBonus].bonusScreen(true);
-        } else if (iteracionesBonus >= 12) {
-            jugador[iteracionesBonus - 12].bonusScreen(false);
-            jugador[iteracionesBonus - 11].bonusScreen(true);
-        }
-        if (iteracionesBonus < jugadorBonus) {
-            iteracionesBonus++;
-            tiempoBonus += 20;
-            BonusTimer();
-        } else {
-            iteracionesBonus = -1;
-            jugadorBonus = -1;
-            tiempoBonus = 200;
-            cambiarBotones();
-            pagarBonus();
-        }
-    }
-
-    private void pagarBonus() {
-        if (tablero.mesaJuego.jugador[ganadorBonus].verapuesta() > 0 && tablero.mesaJuego.jugador[ganadorBonus].verSiPausado()) {
-            tablero.mesaJuego.jugador[ganadorBonus].cargarapuesta(30);
-            ProgresivoTV.PagarProgresivo(30);
-        }
-
-    }
-
-    private void EstadoBonusOn() {
-        retirarseTV.Bloquear();
-        pagarTV.Bloquear();
-        jugarTV.Bloquear();
-        apostarTV.Bloquear();
-        AvisoTV.setBackgroundResource(R.drawable.avisobonus);
-        AvisoTV.setText(R.string.Bonus);
-        habilitarJugadores();
-    }
-
-
-    //Timer***********************************************************************************************
+     //Timer***********************************************************************************************
     //Funcion que se realiza iterativamente durante toda la fase de juego
     final Handler handler = new Handler();
     Timer t = new Timer();
-
+    public int iteracionesProgresivoLoco=0;
+    public int ganadorParPerfecto=0;
     public void progresivoLoco() {
         t.schedule(new TimerTask() {
             public void run() {
                 handler.post(new Runnable() {
                     public void run() {
-                        if (EstadoJuego == 2) {
+                        if (iteracionesProgresivoLoco<20) {
+                            iteracionesProgresivoLoco++;
                             ProgresivoTV.aumentoAleatorio();
+                            ganadorParPerfecto = (int) Math.floor(Math.random() * 13);
+                            PonerCarta(ganadorParPerfecto);
                             progresivoLoco();
+                        }else{
+                            iteracionesProgresivoLoco=0;
+                            retirarseTV.Habilitar();
+                            pagarTV.Habilitar();
+                            jugarTV.Seleccionar();
+                            apostarTV.Habilitar();
                         }
+
                     }
                 });
             }
-        }, 150);
+
+        }, 200);
     }
+
+    private void PonerCarta(int posicion){
+        switch(posicion)
+        {case 0:
+            Bono1TV.setBackgroundResource(R.drawable.cartaa);
+            Bono2TV.setBackgroundResource(R.drawable.cartaa);
+            break;
+        case 1:
+            Bono1TV.setBackgroundResource(R.drawable.carta2);
+            Bono2TV.setBackgroundResource(R.drawable.carta2);
+            break;
+        case 2:
+            Bono1TV.setBackgroundResource(R.drawable.carta3);
+            Bono2TV.setBackgroundResource(R.drawable.carta3);
+            break;
+        case 3:
+            Bono1TV.setBackgroundResource(R.drawable.carta4);
+            Bono2TV.setBackgroundResource(R.drawable.carta4);
+            break;
+        case 4:
+            Bono1TV.setBackgroundResource(R.drawable.carta5);
+            Bono2TV.setBackgroundResource(R.drawable.carta5);
+            break;
+        case 5:
+            Bono1TV.setBackgroundResource(R.drawable.carta6);
+            Bono2TV.setBackgroundResource(R.drawable.carta6);
+            break;
+        case 6:
+            Bono1TV.setBackgroundResource(R.drawable.carta7);
+            Bono2TV.setBackgroundResource(R.drawable.carta7);
+            break;
+        case 7:
+            Bono1TV.setBackgroundResource(R.drawable.carta8);
+            Bono2TV.setBackgroundResource(R.drawable.carta8);
+            break;
+        case 8:
+            Bono1TV.setBackgroundResource(R.drawable.carta9);
+            Bono2TV.setBackgroundResource(R.drawable.carta9);
+            break;
+        case 9:
+            Bono1TV.setBackgroundResource(R.drawable.carta10);
+            Bono2TV.setBackgroundResource(R.drawable.carta10);
+            break;
+        case 10:
+            Bono1TV.setBackgroundResource(R.drawable.cartaj);
+            Bono2TV.setBackgroundResource(R.drawable.cartaj);
+            break;
+        case 11:
+            Bono1TV.setBackgroundResource(R.drawable.cartaq);
+            Bono2TV.setBackgroundResource(R.drawable.cartaq);
+            break;
+        case 12:
+            Bono1TV.setBackgroundResource(R.drawable.cartak);
+            Bono2TV.setBackgroundResource(R.drawable.cartak);
+            break;
+        }
+
+
+    }
+
 
 
 //*************************************************************************************************************************
@@ -336,7 +337,7 @@ public class Mesa {
     private void BotonesdePago() {
         retirarseTV.Bloquear();
         pagarTV.Seleccionar();
-        jugarTV.Habilitar();
+        jugarTV.Bloquear();
         apostarTV.Habilitar();
 
         for (int i = 0; i < ApuestaPremio.length; i++) {
@@ -350,9 +351,10 @@ public class Mesa {
     //--------------------------------------------------------------------------------------------------//
     private void BotonesdeJuego() {
         retirarseTV.Bloquear();
-        pagarTV.Habilitar();
-        jugarTV.Seleccionar();
-        apostarTV.Habilitar();
+        pagarTV.Bloquear();
+        jugarTV.Bloquear();
+        apostarTV.Bloquear();
+
 
         for (int i = 0; i < ApuestaPremio.length; i++) {
             ApuestaPremio[i].BotonesPremio();
@@ -405,23 +407,85 @@ public class Mesa {
 
     //Acciones que permiten confirmar el pago, es valida cuando el codigo ingresado en codigoaut pertenece a un dealer o supervisor
     public int AccionesConfirmarPago() {
+
         double Progresivo = (int) ProgresivoTV.ValorDelProgresivo();
         double Premio = ApuestaPremio[ApuPreSeleccionado()].ValorNumerico();
         double pago;
-
-
         if (ApuPreSeleccionado < 2) {
             pago = Math.floor((double) (Progresivo * (Premio / 100)) / CPPLogin.manip.verValorFicha());
 
         } else {
             pago = Premio;
         }
-
-        ProgresivoTV.PagarProgresivo((int) pago);
-        jugador[JugadorSeleccionado()].cargarapuesta((int) pago);
-        jugador[JugadorSeleccionado()].cargarSuperApuesta();
-        restringirJugador(JugadorSeleccionado());
+        DineroPagoConEstilo=(int)pago;
+        retirarseTV.Bloquear();
+        pagarTV.Bloquear();
+        jugarTV.Bloquear();
+        apostarTV.Bloquear();
+        pagarConEstilo();
         return (int) pago;
+    }
+
+    final Handler handler3 = new Handler();
+    Timer t2 = new Timer();
+    private int DineroPagoConEstilo=0;
+    private int conteoPagoestilo=0;
+    private int cuantosubir=0;
+    private int sobrante=0;
+//pago con estilo---------------------------------------------------------------------------------------------------------------------------
+    private void pagarConEstilo(){
+        t2.schedule(new TimerTask() {
+            public void run() {
+                handler3.post(new Runnable() {
+                    public void run() {
+                        if (conteoPagoestilo == 0) {
+                            cuantosubir = DineroPagoConEstilo / 20;
+                            sobrante = DineroPagoConEstilo % 20;
+                        }
+                        if (conteoPagoestilo < 20) {
+                            conteoPagoestilo++;
+                            ProgresivoTV.PagarProgresivo(cuantosubir);
+                            jugador[JugadorSeleccionado()].cargarapuesta(cuantosubir);
+                            reproducirSonido(1);
+                            pagarConEstilo();
+
+                        }else if(conteoPagoestilo>=20 && conteoPagoestilo<20+sobrante){
+                            conteoPagoestilo++;
+                            ProgresivoTV.PagarProgresivo(1);
+                            jugador[JugadorSeleccionado()].cargarapuesta(1);
+                            reproducirSonido(1);
+                            pagarConEstilo();
+
+                        }else {
+                            jugador[JugadorSeleccionado()].cargarSuperApuesta();
+                            cambiarBotones();
+                            restringirJugador(JugadorSeleccionado());
+                            conteoPagoestilo=0;
+                            DineroPagoConEstilo=0;
+                            cuantosubir=0;
+                            sobrante=0;
+                        }
+                    }
+                });
+            }
+        }, 100);
+    }
+    public void reproducirSonido(int position)
+    {
+        //Obtenemos el id del sonido
+        switch (position){
+            case 1:
+                sonido.play(clic);
+                break;
+            case 2:
+                sonido.play(aviso);
+                break;
+            case 3:
+                sonido.play(winner);
+            default:
+                break;
+        }
+
     }
 }
 

@@ -17,12 +17,21 @@ public class lTVClickBtnApeustasPremios implements View.OnClickListener   {
                 tablero.mesaJuego.SeleccionarApuPre(1);
                 return 1;
             case R.id.tvPremioApuesta3:
+                tablero.mesaJuego.SeleccionarApuPre(2);
+                return 2;
+            case R.id.tvPremioApuesta4:
+                tablero.mesaJuego.SeleccionarApuPre(3);
+                return 3;
+            case R.id.tvPremioApuesta5:
+                tablero.mesaJuego.SeleccionarApuPre(4);
+                return 4;
+            case R.id.tvPremioApuesta6:
                 if (tablero.mesaJuego.verElEstadoDelJuego() == 3) {
-                    tablero.mesaJuego.ApuestaPremio[2].cambiarRestando();
-                    return 2;
+                    tablero.mesaJuego.ApuestaPremio[5].cambiarRestando();
+                    return 5;
                 }else{
-                    tablero.mesaJuego.SeleccionarApuPre(2);
-                    return 2;
+                    tablero.mesaJuego.SeleccionarApuPre(5);
+                    return 5;
                 }
             default:
                 return -1;
@@ -69,11 +78,11 @@ public class lTVClickBtnApeustasPremios implements View.OnClickListener   {
                    int jug=tablero.mesaJuego.JugadorSeleccionado();
                    int Apu=0;
 
-                   if(i!=2) {
+                   if(i!=5) {
                        Apu = tablero.mesaJuego.ApuestaPremio[i].ValorNumerico();
                    }
                    if (jug>=0) {
-                       if (tablero.mesaJuego.ApuestaPremio[2].verSiRestando()) {
+                       if (tablero.mesaJuego.ApuestaPremio[5].verSiRestando()) {
                            tablero.mesaJuego.jugador[jug].cargarapuesta(-Apu);
                        }else{
                            tablero.mesaJuego.jugador[jug].cargarapuesta(Apu);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">cashPokerProgresive</string>
+    <string name="app_name">TexasHoldEmProgressive</string>
 
     <string name="Pagar">Pagar</string>
     <string name="Jugar">Jugar</string>
@@ -46,6 +46,4 @@
     <string name="action_sign_in">Ingresar</string>
     <string name="error_UsuarioycontraInv">Su usuario o contraseña son invalidos</string>
     <string name="action_sign_in_short"></string>
-
-
 </resources>
