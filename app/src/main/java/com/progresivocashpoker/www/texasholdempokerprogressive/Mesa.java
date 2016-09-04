@@ -87,12 +87,12 @@ public class Mesa {
         int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
         int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
 
-        ApuestaPremio[0].Movimientopremio(-X1, -Y1);
-        ApuestaPremio[1].Movimientopremio(-X2, -Y2);
-        ApuestaPremio[2].Movimientopremio(-X3, -Y3);
-        ApuestaPremio[3].Movimientopremio(-X4, -Y4);
-        ApuestaPremio[4].Movimientopremio(-X5, -Y5);
-        ApuestaPremio[5].Movimientopremio(-X6, -Y6);
+        ApuestaPremio[0].Movimientopremio(-2*X1, -2*Y1);
+        ApuestaPremio[1].Movimientopremio(-2*X2, -2*Y2);
+        ApuestaPremio[2].Movimientopremio(-2*X3, -2*Y3);
+        ApuestaPremio[3].Movimientopremio(-2*X4, -2*Y4);
+        ApuestaPremio[4].Movimientopremio(-2*X5, -2*Y5);
+        ApuestaPremio[5].Movimientopremio(-2*X6, -2*Y6);
     }
 
     private void animaciondesplazamientoApuesta() {
@@ -110,12 +110,12 @@ public class Mesa {
         int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
         int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
 
-        ApuestaPremio[0].Movimientoapuesta(-X1, -Y1);
-        ApuestaPremio[1].Movimientoapuesta(-X2, -Y2);
-        ApuestaPremio[2].Movimientoapuesta(-X3, -Y3);
-        ApuestaPremio[3].Movimientoapuesta(-X4, -Y4);
-        ApuestaPremio[4].Movimientoapuesta(-X5, -Y5);
-        ApuestaPremio[5].Movimientoapuesta(-X6, -Y6);
+        ApuestaPremio[0].Movimientoapuesta(-2*X1, -2*Y1);
+        ApuestaPremio[1].Movimientoapuesta(-2*X2, -2*Y2);
+        ApuestaPremio[2].Movimientoapuesta(-2*X3, -2*Y3);
+        ApuestaPremio[3].Movimientoapuesta(-2*X4, -2*Y4);
+        ApuestaPremio[4].Movimientoapuesta(-2*X5, -2*Y5);
+        ApuestaPremio[5].Movimientoapuesta(-2*X6, -2*Y6);
     }
 
     //funcion que cambia el textview mientras es undido

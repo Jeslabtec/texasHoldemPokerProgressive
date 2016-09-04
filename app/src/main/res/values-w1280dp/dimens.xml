@@ -9,7 +9,7 @@
     <dimen name="tamano_texto_fichasFase">28sp</dimen>
     <dimen name="tamano_texto_fichasFaseAcre">20sp</dimen>
     <dimen name="tamano_texto_aviso">50sp</dimen>
-    <dimen name="tamano_texto_Codigoaut1">400sp</dimen>
+    <dimen name="tamano_texto_Codigoaut1">300sp</dimen>
     <dimen name="tamano_texto_Codigoaut2">200sp</dimen>
 
     <dimen name="Tamano_jugadores_topW">100dp</dimen>
@@ -32,9 +32,9 @@
 
     <dimen name="Distancia_jugadores_abajo1">205dp</dimen>
     <dimen name="Distancia_jugadores_abajo2">190dp</dimen>
-    <dimen name="Distancia_jugadores_abajo3">230dp</dimen>
-    <dimen name="Distancia_jugadores_abajo4">400dp</dimen>
-    <dimen name="Distancia_jugadores_abajo5">510dp</dimen>
+    <dimen name="Distancia_jugadores_abajo3">210dp</dimen>
+    <dimen name="Distancia_jugadores_abajo4">370dp</dimen>
+    <dimen name="Distancia_jugadores_abajo5">450dp</dimen>
 
     <dimen name="Distancia_jugadores_lateral1">500dp</dimen>
     <dimen name="Distancia_jugadores_lateral2">360dp</dimen>
