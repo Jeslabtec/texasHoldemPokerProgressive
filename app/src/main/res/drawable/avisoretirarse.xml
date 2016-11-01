@@ -7,6 +7,7 @@
             android:width="@dimen/Borde_aviso"
             />
         <corners android:radius="30dp"/>
+        <solid android:color="@color/Verde_fantasma"/>
     </shape>
 </item>
 <item     android:top="@dimen/Tamaño_aviso_PaddingH"

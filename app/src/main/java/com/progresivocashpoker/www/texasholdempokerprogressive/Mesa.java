@@ -4,8 +4,11 @@ package com.progresivocashpoker.www.texasholdempokerprogressive;
 import android.os.Handler;
 import android.widget.TextView;
 
+import org.json.JSONException;
+
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by JuanEsteban on 28/04/2016.
@@ -71,62 +74,73 @@ public class Mesa {
     }
 
     //---------------------------------------------------------------------------------
-    //Animaciones de los botones de apuestaPremio llamados desde abajo
+    //ANIMACION QUE PERMITE UBICAR LOS BOTONES DE PREMIO EN SU POSICION CORRECTA, COMPRENDE MOVIMIENTO EN X Y Y
     private void animaciondesplazamientoPremio() {
-        int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
-        int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
-        int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
-        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
-        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
+        float Y1 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist1);
+        float Y2 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist2);
+        float Y3 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist3);
+        float Y4 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist4);
+        float Y5 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist5);
+        float Y6 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist6);
 
-        int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
-        int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
-        int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
-        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
-        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
-        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
-
-        ApuestaPremio[0].Movimientopremio(-2*X1, -2*Y1);
-        ApuestaPremio[1].Movimientopremio(-2*X2, -2*Y2);
-        ApuestaPremio[2].Movimientopremio(-2*X3, -2*Y3);
-        ApuestaPremio[3].Movimientopremio(-2*X4, -2*Y4);
-        ApuestaPremio[4].Movimientopremio(-2*X5, -2*Y5);
-        ApuestaPremio[5].Movimientopremio(-2*X6, -2*Y6);
+        float X1 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_1);
+        float X2 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_2);
+        float X3 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_3);
+        float X4 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_4);
+        float X5 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_5);
+        float X6 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_6);
+        ApuestaPremio[0].Movimientopremio(-X2, -Y2);
+        ApuestaPremio[1].Movimientopremio(-X3, -Y3);
+        ApuestaPremio[2].Movimientopremio(-X4, -Y4);
+        ApuestaPremio[3].Movimientopremio(-X5, -Y5);
+        ApuestaPremio[4].Movimientopremio(-X6, -Y6);
+        ApuestaPremio[5].Movimientopremio(-X6, -Y6);
     }
-
+    //ANIMACION QUE PERMITE UBICAR LOS BOTONES DE APUESTA EN SU POSICION CORRECTA, COMPRENDE MOVIMIENTO EN X Y Y
     private void animaciondesplazamientoApuesta() {
-        int Y1 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist1);
-        int Y2 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist2);
-        int Y3 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist3);
-        int Y4 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist4);
-        int Y5 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist5);
-        int Y6 = tablero.dato.getResources().getInteger(R.integer.ApuPreDist6);
+        float Y1 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist1);
+        float Y2 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist2);
+        float Y3 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist3);
+        float Y4 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist4);
+        float Y5 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist5);
+        float Y6 = tablero.dato.getResources().getDimension(R.dimen.ApuPreDist6);
 
-        int X1 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_1);
-        int X2 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_2);
-        int X3 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_3);
-        int X4 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_4);
-        int X5 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_5);
-        int X6 = tablero.dato.getResources().getInteger(R.integer.Dis_separaApuPre_6);
+        float X1 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_1);
+        float X2 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_2);
+        float X3 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_3);
+        float X4 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_4);
+        float X5 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_5);
+        float X6 = tablero.dato.getResources().getDimension(R.dimen.Dis_separaApuPre_6);
 
-        ApuestaPremio[0].Movimientoapuesta(-2*X1, -2*Y1);
-        ApuestaPremio[1].Movimientoapuesta(-2*X2, -2*Y2);
-        ApuestaPremio[2].Movimientoapuesta(-2*X3, -2*Y3);
-        ApuestaPremio[3].Movimientoapuesta(-2*X4, -2*Y4);
-        ApuestaPremio[4].Movimientoapuesta(-2*X5, -2*Y5);
-        ApuestaPremio[5].Movimientoapuesta(-2*X6, -2*Y6);
+        ApuestaPremio[0].Movimientoapuesta(-X1, -Y1);
+        ApuestaPremio[1].Movimientoapuesta(-X2, -Y2);
+        ApuestaPremio[2].Movimientoapuesta(-X3, -Y3);
+        ApuestaPremio[3].Movimientoapuesta(-X4, -Y4);
+        ApuestaPremio[4].Movimientoapuesta(-X5, -Y5);
+        ApuestaPremio[5].Movimientoapuesta(-X6, -Y6);
     }
 
     //funcion que cambia el textview mientras es undido
     //Funcion que pregunta quienes estan en cero y los bloquea
-    public void restringirJugadores() {
+    public void restringirJugadoresjuego() {
+        for (int i = 0; i < jugador.length; i++) {
+            if (jugador[i].verapuesta() == 0) {
+                jugador[i].SwitchAvisoApuestaAcabada(false);
+                jugador[i].Bloquear();
+                //CUANDO UN JUGADOR SOLO TIENE UN CREDITO EL JUEGO DEBE AVISAR AL DEALER
+            }else if (jugador[i].verapuesta() == 1) {
+                 //PERMITE PRENDER EL AVISO DE APUESTA ACABADA
+                jugador[i].SwitchAvisoApuestaAcabada(true);
+                //PRENDE EL AVISO APUESTA ACABADA
+                jugador[i].avisoApuestaAcabada();
+            }
+        }
+    }
+    //FUNCION QUE ES LLAMADA CUANDO SE PRESIONA RETIRAR, SIMPLEMENTE BLOQUEA LOS JUGADORES SIN CREDITO
+    public void restringirJugadoresretiro() {
         for (int i = 0; i < jugador.length; i++) {
             if (jugador[i].verapuesta() == 0) {
                 jugador[i].Bloquear();
-            }
-            if (jugador[i].verapuesta() == 1) {
-                jugador[i].avisoApuestaAcabada();
             }
         }
     }
@@ -202,19 +216,200 @@ public class Mesa {
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Funcion para iniciar el juego
     public void PonerAJugar() {
-
+        //1. LUEGO DE INHHABILITAR LOS JUGADORES SIN CREDITO CARGO LA SUPERAPUESTA
+        //DE LOS QUE SI TIENEN CREDITO Y LUEGO LES QUITO DE A 1 CREDITO CON APOSTEMOS
         for (int i = 0; i < tablero.mesaJuego.jugador.length; i++) {
             if (tablero.mesaJuego.jugador[i].verapuesta() > 0) {
                 tablero.mesaJuego.jugador[i].cargarSuperApuesta();
                 tablero.mesaJuego.jugador[i].apostemos();
             }
         }
-
+        //CONDICIONAL QUE PREGUNTA SI HAY BONUS EN LA ESTA PARTIDA
+        if(jugadaActual==jugadasBonus){
+            unGanadorBonus=true;
+            //CONDICIONAL QUE ASEGURA QUE JUGADA ACTUAL NO SOBREASE JUGADA BONUS
+        }else if(jugadaActual>jugadasBonus){
+            jugadaActual=0;
+        }
+        //DE ACUERDO AL NUMERO DE JUGADORES EN LA PARTIDA ACTUAL SE SETEA UN AUMENTO DEL PREMIO EN EL
+        //PROGRESIVO
         ProgresivoTV.setAumentoPremio();
+        //INICIO DE LA FUNCION TEMPORIZADA DEL ESTADO DE JUEGO, ENTRE OTRAS COSAS PERMITE QUE SE VEA LENTAMENTE
+        //EL AUMENTO DEL PROGRESIVO
         progresivoLoco();
-
+        //VARIABLE QUE AL IGUALARSE CON BONUS HABILITA CUALQUIERA DE LOS DOS BONUS
+        jugadaActual++;
     }
-     //Timer***********************************************************************************************
+
+    //Bonus************************************************************************************************
+    //variable que dice en que jugada va a haber un ganadoR
+    private int jugadasBonus = getBinomial(4, 0.5);
+    //conteo de las jugadas que se reinicia cuando hay un ganador
+    private int jugadaActual = 0;    //
+    //PERMITE CONTAR LAS ITERACIONES EN CADA BONUS
+    private int iteracionesBonus = -1;
+    //INDICA EL TIEMPO QUE VA A DEMORARSE EL TEMPORIZADOR DEL BONUS EN MILISEGUNDOS
+    private int tiempoBonus = 300;
+    //INDICA CUAL FUE EL JUGADOR QUE GANO EL BONUS INDIVIDUAL
+    private int ganadorBonus = (int) Math.floor(Math.random() * 10);
+    private int pagoBonus;
+    Timer t1 = new Timer();
+    final Handler handler1 = new Handler();
+    private int bonus1,bonus2;
+    private boolean Bonusactive=true;
+    private boolean unGanadorBonus=false;
+    public boolean GanaronBonus=false;
+    //Parte estadistica
+    public int getBinomial(int n, double p) {
+        int x = 0;
+        for (int i = 0; i < n; i++) {
+            if (Math.random() < p)
+                x++;
+        }
+        return x;
+    }
+    //Timer que ejecuta las acciones visuales en el momento del bonus
+    private void BonusTimer() {
+        t1.schedule(new TimerTask() {
+            public void run() {
+                handler1.post(new Runnable() {
+                    public void run() {
+                        reproducirSonido(2);
+                        if(bonus1>0) {
+                            SeleccionarJugadorBonus();
+                        }else{
+                            Bonustodos();
+                        }
+
+                    }
+                });
+            }
+        }, tiempoBonus);
+    }
+    //Permite rotar la ubicacion de cada jugador
+    private void BonusCambio() {
+        for (int i = 0; i < jugador.length; i++) {
+            jugador[i].bonusScreen(false);
+        }
+        SeleccionarJugadorBonus();    }
+    //Sirve ara ir pasando el jugador hasta que llegue al ganador
+    public void SeleccionarJugadorBonus() {
+        if (iteracionesBonus == -1) {
+            jugador[iteracionesBonus + 1].bonusScreen(true);
+        } else if (iteracionesBonus >= 0 && iteracionesBonus < 9) {
+            jugador[iteracionesBonus].bonusScreen(false);
+            jugador[iteracionesBonus + 1].bonusScreen(true);
+        } else if (iteracionesBonus >= 9 && iteracionesBonus < 18) {
+            jugador[18 - iteracionesBonus].bonusScreen(false);
+            jugador[17 - iteracionesBonus].bonusScreen(true);
+        } else if (iteracionesBonus >= 18) {
+            jugador[iteracionesBonus - 18].bonusScreen(false);
+            jugador[iteracionesBonus - 17].bonusScreen(true);
+        }
+        if (iteracionesBonus < 17 + ganadorBonus) {
+            iteracionesBonus++;
+            tiempoBonus += 20;
+            BonusTimer();
+        } else {
+            iteracionesBonus = -1;
+            pagarBonus();
+        }
+    }
+    //Funcion que paga a un jugador el bonus
+    private void pagarBonus() {
+        if (jugador[ganadorBonus].verSiPausado() && jugador[ganadorBonus].jugadortv.isEnabled()) {
+            pagarConEstiloBonus();
+            try {
+                CPPLogin.manip.EnviarMovimiento(CPPLogin.manip.idTablet, "salida", pagoBonus);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }else{
+            EstadoBonusOff();
+        }
+    }
+    private void Bonustodos(){
+        if(iteracionesBonus<2*pagoBonus-2){
+            for(int i=0;i<jugador.length;i++){
+                jugador[i].bonusScreen(Bonusactive);
+                if (jugador[i].verSiPausado() && jugador[i].jugadortv.isEnabled() && Bonusactive) {
+                    ProgresivoTV.PagarProgresivo(1);
+                    jugador[i].cargarapuesta(1);
+                    jugador[i].cargarSuperApuesta();
+                    ;
+                }
+            }
+            iteracionesBonus++;
+            Bonusactive=!Bonusactive;
+            BonusTimer();
+        }else{
+            iteracionesBonus=-1;
+            PagarBonusTodos();
+            Bonusactive=true;
+        }
+    }
+    private void PagarBonusTodos(){
+        int contganadores=0;
+        for(int i=0;i<jugador.length;i++){
+            if (jugador[i].verSiPausado() && jugador[i].jugadortv.isEnabled()) {
+                jugador[i].cargarSuperApuesta();
+                contganadores++;
+            }
+        }
+        EstadoBonusOff();
+        try {
+            CPPLogin.manip.EnviarMovimiento(CPPLogin.manip.idTablet,"salida",pagoBonus*contganadores);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        };
+    }
+    private void EstadoBonusOff(){
+        for(int i=0;i<jugador.length;i++){
+            if (!jugador[i].verSiPausado()) {
+                jugador[i].ponerPausado();
+                jugador[i].ponerPausado();
+            }else if(jugador[i].jugadortv.isEnabled()) {
+                jugador[i].Habilitar();
+                if(jugador[i].verapuesta()==0){
+                    jugador[i].SwitchAvisoApuestaAcabada(true);
+                    jugador[i].avisoApuestaAcabada();
+                }
+            }else{
+                jugador[i].Bloquear();
+            }
+        }
+        GanaronBonus=false;
+        retirarseTV.Bloquear();
+        pagarTV.Habilitar();
+        jugarTV.Seleccionar();
+        apostarTV.Habilitar();
+        AvisoTV.setBackgroundResource(R.drawable.avisojugar);
+        AvisoTV.setText(R.string.Jugar);
+        animaciondesplazamientoPremio();
+    }
+    private void EstadoBonusOn() {
+        retirarseTV.Bloquear();
+        pagarTV.Bloquear();
+        jugarTV.Bloquear();
+        apostarTV.Bloquear();
+        AvisoTV.setBackgroundResource(R.drawable.avisobonus);
+        if(bonus1>0) {
+            AvisoTV.setText("+"+String.valueOf(pagoBonus)+ " JUGADOR");
+        }else{
+            AvisoTV.setText("+"+String.valueOf(pagoBonus)+ " JUGADORES");
+        }
+    }
+
+
+    //Timer***********************************************************************************************
     //Funcion que se realiza iterativamente durante toda la fase de juego
     final Handler handler = new Handler();
     Timer t = new Timer();
@@ -232,11 +427,34 @@ public class Mesa {
                             PonerCarta(ganadorParPerfecto);
                             progresivoLoco();
                         }else{
-                            iteracionesProgresivoLoco=0;
-                            retirarseTV.Habilitar();
-                            pagarTV.Habilitar();
-                            jugarTV.Seleccionar();
-                            apostarTV.Habilitar();
+                            if (unGanadorBonus) {
+                                GanaronBonus=true;
+                                unGanadorBonus=false;
+                                jugadaActual = 0;
+                                jugadasBonus = 3;
+                                //bonus1=getBinomial(16,0.0625);
+                                //bonus2=getBinomial(160,0.1875);
+                                bonus1=(bonus1==0)?(1):(0);
+                                if (bonus1>0) {
+                                    ganadorBonus = (int) Math.floor(Math.random() * 10);
+                                    pagoBonus= getBinomial(5,0.2)+5;
+                                    tiempoBonus=300;
+                                    EstadoBonusOn();
+                                    BonusCambio();
+                                }
+                                else{
+                                    pagoBonus= getBinomial(5,0.2)+5;
+                                    EstadoBonusOn();
+                                    tiempoBonus=Math.round(3000/pagoBonus);
+                                    Bonustodos();
+                                }
+                            }else{
+                                    retirarseTV.Habilitar();
+                                    pagarTV.Habilitar();
+                                    jugarTV.Seleccionar();
+                                    apostarTV.Habilitar();
+                                }
+                            iteracionesProgresivoLoco = 0;
                         }
 
                     }
@@ -245,7 +463,6 @@ public class Mesa {
 
         }, 200);
     }
-
     private void PonerCarta(int posicion){
         switch(posicion)
         {case 0:
@@ -305,8 +522,6 @@ public class Mesa {
 
     }
 
-
-
 //*************************************************************************************************************************
 
     //Funcion que cambia el estado de juego
@@ -331,6 +546,8 @@ public class Mesa {
         AvisoTV.setText(R.string.Acreditar);
         habilitarJugadores();
         animaciondesplazamientoApuesta();
+        Bono1TV.setBackgroundResource(R.drawable.cartamazo);
+        Bono2TV.setBackgroundResource(R.drawable.cartamazo);
     }
 
     //----------------------------------------------------------------------------------------//
@@ -346,6 +563,8 @@ public class Mesa {
         AvisoTV.setBackgroundResource(R.drawable.avisopagar);
         AvisoTV.setText(R.string.Pagar);
         animaciondesplazamientoPremio();
+        Bono1TV.setBackgroundResource(R.drawable.cartamazo);
+        Bono2TV.setBackgroundResource(R.drawable.cartamazo);
     }
 
     //--------------------------------------------------------------------------------------------------//
@@ -361,12 +580,11 @@ public class Mesa {
         }
 
         SeleccionarJugador(-1);
-        restringirJugadores();
+        restringirJugadoresjuego();
         AvisoTV.setBackgroundResource(R.drawable.avisojugar);
         AvisoTV.setText(R.string.Jugar);
         animaciondesplazamientoPremio();
     }
-
     //---------------------------------------------------------------------------------------------------------------//
     private void BotonesdeRetiro() {
         retirarseTV.Seleccionar();
@@ -378,15 +596,16 @@ public class Mesa {
             ApuestaPremio[i].BotonesDesaparecer();
         }
         SeleccionarJugador(-1);
-        restringirJugadores();
+        restringirJugadoresretiro();
         AvisoTV.setBackgroundResource(R.drawable.avisoretirarse);
         AvisoTV.setText(R.string.Retirar);
         animaciondesplazamientoPremio();
+        Bono1TV.setBackgroundResource(R.drawable.cartamazo);
+        Bono2TV.setBackgroundResource(R.drawable.cartamazo);
     }
     //-------------------------------------------------------------------------------------------------------------------//
     // metodos
     //dependiendo del estado del juego se habilitaran o desabilitaran algunos botones
-
     public void cambiarBotones() {
         switch (EstadoJuego) {//----------------------------------------------------------------------------------------------
             case 1:
@@ -418,6 +637,10 @@ public class Mesa {
             pago = Premio;
         }
         DineroPagoConEstilo=(int)pago;
+        cuantosubir = DineroPagoConEstilo / 20;
+        sobrante = DineroPagoConEstilo % 20;
+        conteoPagoestilo=(cuantosubir==0)?(20):(0);
+
         retirarseTV.Bloquear();
         pagarTV.Bloquear();
         jugarTV.Bloquear();
@@ -425,51 +648,68 @@ public class Mesa {
         pagarConEstilo();
         return (int) pago;
     }
-
     final Handler handler3 = new Handler();
-    Timer t2 = new Timer();
     private int DineroPagoConEstilo=0;
     private int conteoPagoestilo=0;
     private int cuantosubir=0;
     private int sobrante=0;
 //pago con estilo---------------------------------------------------------------------------------------------------------------------------
-    private void pagarConEstilo(){
-        t2.schedule(new TimerTask() {
+private void pagarConEstilo(){
+    t1.schedule(new TimerTask() {
+        public void run() {
+            handler3.post(new Runnable() {
+                public void run() {
+                    if (conteoPagoestilo < 20) {
+                        conteoPagoestilo++;
+                        ProgresivoTV.PagarProgresivo(cuantosubir);
+                        jugador[JugadorSeleccionado()].cargarapuesta(cuantosubir);
+                        reproducirSonido(1);
+                        pagarConEstilo();
+
+                    }else if(conteoPagoestilo>=20 && conteoPagoestilo<20+sobrante){
+                        conteoPagoestilo++;
+                        ProgresivoTV.PagarProgresivo(1);
+                        jugador[JugadorSeleccionado()].cargarapuesta(1);
+                        reproducirSonido(1);
+                        pagarConEstilo();
+
+                    }else {
+                        jugador[JugadorSeleccionado()].cargarSuperApuesta();
+                        restringirJugador(JugadorSeleccionado());
+                        cambiarBotones();
+                        conteoPagoestilo=0;
+                        DineroPagoConEstilo=0;
+                        cuantosubir=0;
+                        sobrante=0;
+                    }
+                }
+            });
+        }
+    }, 100);
+}
+    private void pagarConEstiloBonus(){
+        t1.schedule(new TimerTask() {
             public void run() {
                 handler3.post(new Runnable() {
                     public void run() {
-                        if (conteoPagoestilo == 0) {
-                            cuantosubir = DineroPagoConEstilo / 20;
-                            sobrante = DineroPagoConEstilo % 20;
-                        }
-                        if (conteoPagoestilo < 20) {
-                            conteoPagoestilo++;
-                            ProgresivoTV.PagarProgresivo(cuantosubir);
-                            jugador[JugadorSeleccionado()].cargarapuesta(cuantosubir);
-                            reproducirSonido(1);
-                            pagarConEstilo();
-
-                        }else if(conteoPagoestilo>=20 && conteoPagoestilo<20+sobrante){
+                        if(conteoPagoestilo<pagoBonus){
                             conteoPagoestilo++;
                             ProgresivoTV.PagarProgresivo(1);
-                            jugador[JugadorSeleccionado()].cargarapuesta(1);
+                            jugador[ganadorBonus].cargarapuesta(1);
                             reproducirSonido(1);
-                            pagarConEstilo();
-
+                            pagarConEstiloBonus();
                         }else {
-                            jugador[JugadorSeleccionado()].cargarSuperApuesta();
-                            cambiarBotones();
-                            restringirJugador(JugadorSeleccionado());
+                            jugador[ganadorBonus].cargarSuperApuesta();
                             conteoPagoestilo=0;
-                            DineroPagoConEstilo=0;
-                            cuantosubir=0;
-                            sobrante=0;
+                            EstadoBonusOff();
                         }
                     }
                 });
             }
-        }, 100);
+        }, 500);
     }
+
+
     public void reproducirSonido(int position)
     {
         //Obtenemos el id del sonido

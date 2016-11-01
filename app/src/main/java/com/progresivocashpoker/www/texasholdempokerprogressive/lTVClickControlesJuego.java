@@ -22,6 +22,8 @@ public class lTVClickControlesJuego implements View.OnClickListener {
                     break;
                 case R.id.tvJugar:
                     tablero.mesaJuego.cambiarElEstadoDelJuego(2);
+                    tablero.mesaJuego.cambiarBotones();
+                    tablero.mesaJuego.PonerAJugar();
                     try {
                         CPPLogin.manip.EnviarMovimiento(CPPLogin.manip.idTablet,"entrada",tablero.mesaJuego.cuantosJugando());
                     } catch (ExecutionException e) {
@@ -33,8 +35,6 @@ public class lTVClickControlesJuego implements View.OnClickListener {
                         Toast.makeText(tablero.dato,e.getMessage(), Toast.LENGTH_LONG).show();
                         //e.printStackTrace();
                     }
-                    tablero.mesaJuego.cambiarBotones();
-                    tablero.mesaJuego.PonerAJugar();
                     break;
                 case R.id.tvApostar:
                     tablero.mesaJuego.cambiarElEstadoDelJuego(3);

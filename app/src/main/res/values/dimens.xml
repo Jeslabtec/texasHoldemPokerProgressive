@@ -40,4 +40,6 @@
 
     <dimen name="Tamaño_aviso_w">370dp</dimen>
     <dimen name="Tamaño_aviso_h">100dp</dimen>
+
+
 </resources>

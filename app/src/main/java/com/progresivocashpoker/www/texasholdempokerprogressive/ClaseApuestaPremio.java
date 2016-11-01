@@ -82,7 +82,7 @@ public class ClaseApuestaPremio {
         }
         ApuestaPremioTV.setBackgroundResource(R.drawable.botonapuesta);
     }
-    public void Movimientopremio(int finX,int finY){
+    public void Movimientopremio(float finX,float finY){
         ObjectAnimator animacionX= ObjectAnimator.ofFloat(ApuestaPremioTV, View.TRANSLATION_X,0,finX);
         ObjectAnimator animacionY= ObjectAnimator.ofFloat(ApuestaPremioTV, View.TRANSLATION_Y,0,finY);
         ObjectAnimator Agrandadorx = ObjectAnimator.ofFloat(ApuestaPremioTV, View.SCALE_X, 1.3f);
@@ -93,7 +93,7 @@ public class ClaseApuestaPremio {
         conjunto.setDuration(1000);
         conjunto.start();
     }
-    public void Movimientoapuesta(int finX,int finY){
+    public void Movimientoapuesta(float finX,float finY){
         ObjectAnimator animacionX= ObjectAnimator.ofFloat(ApuestaPremioTV, View.TRANSLATION_X,0,finX);
         ObjectAnimator animacionY= ObjectAnimator.ofFloat(ApuestaPremioTV, View.TRANSLATION_Y,0,finY);
         ObjectAnimator Agrandadorx = ObjectAnimator.ofFloat(ApuestaPremioTV, View.SCALE_X, 1f);
@@ -103,7 +103,6 @@ public class ClaseApuestaPremio {
         conjunto.setInterpolator(new FastOutLinearInInterpolator());
         conjunto.setDuration(1000);
         conjunto.start();
-
     }
 
     //desaparece los botones

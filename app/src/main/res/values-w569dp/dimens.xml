@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <dimen name="Tamano_jugadores_topW">44dp</dimen>
+    <dimen name="BordesJugadorestopWNEG">41dp</dimen>
+    <dimen name="BordesJugadorestopW">43dp</dimen>
+    <dimen name="Tamano_jugadores_circulo">27dp</dimen>
+    <dimen name="PaddingJugadorCirculo">3dp</dimen>
+    <dimen name="Bordes_jugadores_circulo_w">9dp</dimen>
+    <dimen name="Bordes_jugadores_circulo_h">-13dp</dimen>
+    <dimen name="Distancia_jugadores_lateral1">222dp</dimen>
+    <dimen name="Distancia_jugadores_lateral2">160dp</dimen>
+    <dimen name="Distancia_jugadores_lateral3">98dp</dimen>
+    <dimen name="Distancia_jugadores_lateral4">53dp</dimen>
+    <dimen name="Distancia_jugadores_lateral5">116dp</dimen>
+    <dimen name="TamañoControles">44dp</dimen>
+    <dimen name="Separacion_controles_1">9dp</dimen>
+    <dimen name="Separacion_controles_2">9dp</dimen>
+    <dimen name="Separacion_controles_3">9dp</dimen>
+    <dimen name="Separacion_controles_4">9dp</dimen>
+    <dimen name="Bordes">6dp</dimen>
+    <dimen name="Tamaño_progresivo_w">231dp</dimen>
+    <dimen name="Tamaño_progresivo_PaddingW">4dp</dimen>
+    <dimen name="Borde_progresivo">1dp</dimen>
+    <dimen name="Tamaño_aviso_w">151dp</dimen>
+    <dimen name="Tamaño_aviso_PaddingW">4dp</dimen>
+    <dimen name="Borde_aviso">1dp</dimen>
+    <dimen name="AnchuraBono">53dp</dimen>
+    <dimen name="TamanoPremiosCodigoaut">244dp</dimen>
+    <dimen name="TamanoPremiosCodigoautBordes">22dp</dimen>
+    <dimen name="Tamaño_Margin_Bonus">20dp</dimen>
+    <dimen name="Dis_separaApuPre_1">182dp</dimen>
+    <dimen name="Dis_separaApuPre_2">151dp</dimen>
+    <dimen name="Dis_separaApuPre_3">118dp</dimen>
+    <dimen name="Dis_separaApuPre_4">81dp</dimen>
+    <dimen name="Dis_separaApuPre_5">44dp</dimen>
+    <dimen name="Dis_separaApuPre_6">4dp</dimen>
+</resources>

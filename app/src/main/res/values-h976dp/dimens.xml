@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamano_texto_jugadoresTop">65sp</dimen>
+    <dimen name="tamano_texto_jugadoresDown">32sp</dimen>
+    <dimen name="tamano_texto_jugadoresCirculo">52sp</dimen>
+    <dimen name="tamano_texto_progresivo">104sp</dimen>
+    <dimen name="tamano_texto_Apuesta">39sp</dimen>
+    <dimen name="tamano_texto_Premio">39sp</dimen>
+    <dimen name="tamano_texto_fichasFase">36sp</dimen>
+    <dimen name="tamano_texto_fichasFaseAcre">26sp</dimen>
+    <dimen name="tamano_texto_aviso">65sp</dimen>
+    <dimen name="tamano_texto_Codigoaut1">389sp</dimen>
+    <dimen name="tamano_texto_Codigoaut2">260sp</dimen>
+    <dimen name="Tamano_jugadores_toph">156dp</dimen>
+    <dimen name="BordesJugadorestopHNEG">145dp</dimen>
+    <dimen name="BordesJugadorestopH">151dp</dimen>
+    <dimen name="Tamano_jugadores_downh">45dp</dimen>
+    <dimen name="BordesJugadoresDownHNEG">35dp</dimen>
+    <dimen name="BordesJugadoresDownH">40dp</dimen>
+    <dimen name="Distancia_jugadores_abajo1">266dp</dimen>
+    <dimen name="Distancia_jugadores_abajo2">247dp</dimen>
+    <dimen name="Distancia_jugadores_abajo3">273dp</dimen>
+    <dimen name="Distancia_jugadores_abajo4">493dp</dimen>
+    <dimen name="Distancia_jugadores_abajo5">662dp</dimen>
+    <dimen name="Distancia_Controles1">0dp</dimen>
+    <dimen name="Distancia_Controles2">0dp</dimen>
+    <dimen name="Distancia_Controles3">26dp</dimen>
+    <dimen name="Distancia_Controles4">78dp</dimen>
+    <dimen name="Distancia_ApuPre">42dp</dimen>
+    <dimen name="Tamaño_progresivo_h">143dp</dimen>
+    <dimen name="Tamaño_progresivo_PaddingH">3dp</dimen>
+    <dimen name="Tamaño_aviso_h">87dp</dimen>
+    <dimen name="Tamaño_aviso_PaddingH">6dp</dimen>
+    <dimen name="DistanciaAvisoAbajo">26dp</dimen>
+    <dimen name="AlturaBono">253dp</dimen>
+    <dimen name="ApuPreDist1">208dp</dimen>
+    <dimen name="ApuPreDist2">123dp</dimen>
+    <dimen name="ApuPreDist3">65dp</dimen>
+    <dimen name="ApuPreDist4">32dp</dimen>
+    <dimen name="ApuPreDist5">26dp</dimen>
+    <dimen name="ApuPreDist6">26dp</dimen>
+
+</resources>

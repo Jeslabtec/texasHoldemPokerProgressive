@@ -77,8 +77,9 @@ public class MensajesAlerta {
     AlertDialog msgConfirmarDinero() {
         AlertDialog.Builder creaMensajes = new AlertDialog.Builder(tablero.dato);
 
-        creaMensajes.setMessage("Pagar al Jugador " +
-        tablero.mesaJuego.jugador[tablero.mesaJuego.JugadorSeleccionado()].verapuesta() + " fichas");
+        creaMensajes.setMessage(tablero.dato.getResources().getString(R.string.pagarAlJugador) + " "+
+                tablero.mesaJuego.jugador[tablero.mesaJuego.JugadorSeleccionado()].verapuesta()+ " "+
+                tablero.dato.getResources().getString(R.string.fichas));
 
         creaMensajes.setCancelable(true);
         creaMensajes.setPositiveButton(R.string.Confirmar, new DialogInterface.OnClickListener() {

@@ -38,11 +38,10 @@ public class lTVClickJugadores implements View.OnClickListener {
 
 
     @Override
-    public void onClick(View v)
-    {
-        int i=posicion(v.getId());
-        switch (tablero.mesaJuego.verElEstadoDelJuego())
-            {
+    public void onClick(View v) {
+        int i = posicion(v.getId());
+        if (tablero.mesaJuego.jugador[i].verSiPausado()) {
+            switch (tablero.mesaJuego.verElEstadoDelJuego()) {
                 case 1:     // fase de pago
                     tablero.mesaJuego.SeleccionarJugador(i);
                     break;
@@ -57,6 +56,7 @@ public class lTVClickJugadores implements View.OnClickListener {
                     break;
             }
 
+        }
     }
 
 

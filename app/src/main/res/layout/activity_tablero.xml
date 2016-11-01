@@ -63,7 +63,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="4"
+            android:text="5"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador4-->
@@ -122,7 +122,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="3"
+            android:text="4"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador3-->
@@ -181,7 +181,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="2"
+            android:text="3"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador2-->
@@ -240,7 +240,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="1"
+            android:text="2"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador1-->
@@ -299,7 +299,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="0"
+            android:text="1"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador6-->
@@ -358,7 +358,7 @@
         android:textColor="@color/Dorado3"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
-        android:text="5"
+        android:text="6"
         android:textSize="@dimen/tamano_texto_jugadoresCirculo"
         />
         <!--Jugador7-->
@@ -417,7 +417,7 @@
         android:textColor="@color/Dorado3"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
-        android:text="6"
+        android:text="7"
         android:textSize="@dimen/tamano_texto_jugadoresCirculo"
         />
         <!--Jugador8-->
@@ -476,7 +476,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="7"
+            android:text="8"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador9-->
@@ -535,7 +535,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="8"
+            android:text="9"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Jugador10-->
@@ -594,7 +594,7 @@
             android:textColor="@color/Dorado3"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
-            android:text="9"
+            android:text="10"
             android:textSize="@dimen/tamano_texto_jugadoresCirculo"
             />
         <!--Progresivo-->
@@ -604,14 +604,14 @@
 
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:gravity="center_vertical|center_horizontal"
+
+            android:textColor="@color/Dorado3"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
             android:textSize="@dimen/tamano_texto_progresivo"
-            android:text="100,000,000"
 
             android:background="@drawable/progresivo"
             android:id="@+id/TVprogresivo"
-
-
-
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/Bordes"
@@ -648,9 +648,7 @@
             android:textColor="@color/Dorado1"
             android:textSize="@dimen/tamano_texto_Apuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura6"
-            android:layout_marginRight="@dimen/ApuPreLateral6"
-            android:layout_marginEnd="@dimen/ApuPreLateral6"
+
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso"
@@ -671,10 +669,6 @@
             android:textColor="@color/Dorado1"
             android:textSize="@dimen/tamano_texto_Apuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura5"
-            android:layout_marginRight="@dimen/ApuPreLateral5"
-            android:layout_marginEnd="@dimen/ApuPreLateral5"
-
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso"/>
@@ -693,9 +687,6 @@
             android:textColor="@color/Dorado1"
             android:textSize="@dimen/tamano_texto_Apuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura4"
-            android:layout_marginRight="@dimen/ApuPreLateral4"
-            android:layout_marginEnd="@dimen/ApuPreLateral4"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso" />
@@ -715,9 +706,6 @@
             android:textColor="@color/Dorado1"
             android:textSize="@dimen/tamano_texto_Apuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura3"
-            android:layout_marginRight="@dimen/ApuPreLateral3"
-            android:layout_marginEnd="@dimen/ApuPreLateral3"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso"/>
@@ -738,9 +726,6 @@
 
             android:background="@drawable/botonapuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura2"
-            android:layout_marginRight="@dimen/ApuPreLateral2"
-            android:layout_marginEnd="@dimen/ApuPreLateral2"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso" />
@@ -761,9 +746,6 @@
 
             android:background="@drawable/botonapuesta"
 
-            android:layout_marginBottom="@dimen/ApuPreAltura1"
-            android:layout_marginRight="@dimen/ApuPreLateral1"
-            android:layout_marginEnd="@dimen/ApuPreLateral1"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@id/TextviewAviso"
             android:layout_toLeftOf="@id/TextviewAviso"/>
@@ -869,7 +851,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignLeft="@id/TextviewAviso"
             android:layout_alignStart="@id/TextviewAviso"
-
+            android:layout_marginLeft="@dimen/Tamaño_Margin_Bonus"
+            android:layout_marginStart="@dimen/Tamaño_Margin_Bonus"
             />
         <TextView
             android:layout_width="@dimen/AnchuraBono"
@@ -879,11 +862,9 @@
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@id/TextviewAviso"
             android:layout_alignEnd="@id/TextviewAviso"
+            android:layout_marginRight="@dimen/Tamaño_Margin_Bonus"
+            android:layout_marginEnd="@dimen/Tamaño_Margin_Bonus"
             />
-
-
-
-
     </RelativeLayout>
 
 

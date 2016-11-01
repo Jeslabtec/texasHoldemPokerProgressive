@@ -7,7 +7,7 @@
             android:width="@dimen/Borde_progresivo"
             />
         <corners android:radius="30dp"/>
-
+        <solid android:color="@color/Verde_fantasma"/>
     </shape>
 </item>
 <item
@@ -20,11 +20,7 @@
     <shape android:shape="rectangle"
         >
         <corners android:radius="30dp"/>
-        <gradient
-            android:startColor="@color/gris1"
-            android:centerColor="@color/gris2"
-            android:endColor="@color/gris3"
-            android:angle="0"/>
+        <solid android:color="@color/Negro1"/>
         <stroke android:color="@color/Dorado3"
             android:width="@dimen/Borde_progresivo"
             />

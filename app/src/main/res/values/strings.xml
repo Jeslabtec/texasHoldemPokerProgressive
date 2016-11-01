@@ -35,7 +35,8 @@
     <string name="PagoAprobado">Pago Aprobado</string>
     <string name="Paracontinuar">Para continuar necesita mínimo una apuesta.</string>
     <string name="DebSelJug">Antes debe Seleccionar un Jugador.</string>
-
+    <string name="pagarAlJugador">Pagar al Jugador </string>
+    <string name="fichas"> fichas</string>
     <string name="Dealer">Dealer</string>
     <string name="Supervisor">Supervisor</string>
     <string name="Ingrclave">Ingrese Clave</string>
